@@ -1,0 +1,22 @@
+<div class="global-state-container">
+  <h2> Global State Example (NgRx Counter)</h2>
+
+  <p>Current Count: <strong>{{ count$ | async }}</strong></p>
+
+  <div class="actions">
+    <button class="btn btn-primary" (click)="onIncrement()">Increment</button>
+    
+    <button class="btn btn-warning" (click)="onDecrement()">Decrement</button>
+    <button class="btn btn-info" (click)="onReset()">Reset</button>
+  </div>
+
+  <hr />
+
+  <h3>Explanation</h3>
+  <ul>
+    <li><strong>Global State:</strong> Managed by NgRx Store.</li>
+    <li><strong>Actions:</strong> Components dispatch <code>increment</code>, <code>decrement</code>, <code>reset</code>.</li>
+    <li><strong>Reducer:</strong> Pure function updates state predictably.</li>
+    <li><strong>Selectors:</strong> Components subscribe to global state using <code>store.select()</code>.</li>
+  </ul>
+</div>

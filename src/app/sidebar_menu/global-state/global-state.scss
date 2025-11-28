@@ -1,0 +1,11 @@
+.global-state-container{
+    margin-left: 10px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+}

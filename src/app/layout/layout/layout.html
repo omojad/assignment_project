@@ -1,0 +1,13 @@
+<!-- Main Layout Container -->
+<div class="layout-container">
+  <!-- Top Header Bar -->
+      <app-header (sidebarToggle)="toggleSidebar()"></app-header>
+  <div class="layout-content">
+    <app-sidebar #sidebar></app-sidebar>
+    <!-- Router Outlet for Child Routes -->
+    <div class="router-outlet-container">
+      <router-outlet></router-outlet>
+      <!-- <app-footer></app-footer> -->
+    </div>
+  </div>
+</div>  

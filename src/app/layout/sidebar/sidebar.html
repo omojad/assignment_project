@@ -1,0 +1,70 @@
+<!-- Sidebar Backdrop (Mobile) -->
+<div class="sidebar-backdrop" 
+     [class.show]="sidebarVisible && isMobile" 
+     (click)="closeMobileSidebar()">
+</div>
+
+<!-- Sidebar -->
+<aside class="sidebar" 
+       [class.collapsed]="sidebarCollapsed && !isMobile"
+       [class.show]="sidebarVisible && isMobile">
+  <div class="sidebar-content">
+    
+    <!-- Desktop Collapse Toggle -->
+    <div class="collapse-toggle desktop-only" *ngIf="!isMobile">
+      <button class="collapse-btn" (click)="toggleSidebarCollapse()">
+        <i class="fas" 
+           [ngClass]="sidebarCollapsed ? 'fa-angle-double-right' : 'fa-angle-double-left'">
+        </i>
+      </button>
+    </div>
+
+    <!-- Mobile Close Toggle -->
+    <div class="collapse-toggle mobile-only" *ngIf="isMobile && sidebarVisible">
+      <button class="collapse-btn" (click)="closeMobileSidebar()">
+        <span class="close-icon">×</span>
+      </button>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+      <a class="nav-item" 
+         [class.active]="isActive('/')"
+         (click)="navigateTo('/')">
+        <i class="fas fa-th-large"></i>
+        <span class="nav-text">Home</span>
+      </a>
+      
+      <a class="nav-item" 
+         [class.active]="isActive('/global-state')"
+         (click)="navigateTo('/global-state')">
+        <i class="fas fa-briefcase"></i>
+        <span class="nav-text">Global State </span>
+      </a>
+      
+     
+      <a class="nav-item" 
+         [class.active]="isActive('/products')"
+         (click)="navigateTo('/products')">
+        <i class="fas fa-cog"></i>
+        <span class="nav-text">Products</span>
+      </a>
+
+<!-- 
+       <a class="nav-item" 
+         [class.active]="isActive('/settings')"
+         (click)="navigateTo('/settings')">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="nav-text">Log out</span>
+      </a> -->
+    </nav>
+
+    <!-- Logout Section -->
+    <!-- <div class="logout-section">
+      <a class="logout-btn" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="nav-text">log out</span>
+      </a>
+    </div> -->
+  </div>
+</aside>

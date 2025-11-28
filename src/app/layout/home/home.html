@@ -1,0 +1,30 @@
+ <div style="margin-left: 10px;">
+    <h2> Search Example</h2>
+ <p> React Component Design (or equivalent in Vue/Angular)
+Question:
+<br>
+ Build a SearchBar component that:
+ <br>
+●	Accepts user input.
+<br>
+●	Debounces API calls (only fires request 500ms after user stops typing).
+<br>
+●	Displays a loading indicator while fetching.
+</p>
+<div class="search-container">
+
+  <input
+    type="text"
+    placeholder="Search..."
+    (input)="onSearch($event)"
+  />
+
+  <!-- Loading indicator -->
+  <!-- <div *ngIf="loading" class="loader">Loading...</div> -->
+
+  <!-- Search Results -->
+  <ul>
+    <li *ngFor="let item of results">{{ item }}</li>
+  </ul>
+</div>
+</div>
