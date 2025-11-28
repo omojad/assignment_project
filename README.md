@@ -1,16 +1,35 @@
 # AssignmentProject
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+##  Tech Stack
+- Angular 21 – Frontend framework
+- TypeScript – Strongly typed JavaScript
+- Bootstrap 5 – Responsive grid system and UI components
+- HTML5 / CSS3 – Semantic structure and styling
 
-## Development server
+---
 
-To start a local development server, run:
+##  Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-ng serve
-```
+git clone https://github.com/omojad/assignment_project.git
+cd assignment_project
+npm install
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Running the Project Locally
+Start the development server:
+ng serve
+
+
+Open your browser and navigate to:
+http://localhost:4200/
+The application will automatically reload if you change any source files
+
+To build the project for production
+ng build
+
 
 ## Code scaffolding
 
